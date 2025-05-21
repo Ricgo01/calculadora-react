@@ -1,31 +1,27 @@
-import { use } from 'chai'
-import { useState } from 'react'
+import { act, useState } from 'react'
 
 const useCalculator = () => {
   const [display, setDisplay] = useState('0')
+  
+  const [actualNumber, setActualNumber] = useState(0)
 
-  setDisplay = (value) => {
-    if (value === '0') {
-      setDisplay(value)
-    } else if (display === '0') {
-      setDisplay(value)
-    } else {
-      setDisplay(display + value)
+  const [previousNumber, setPreviusNumber] = useState(0)
+
+  const [operand, setOperand] = useState('')
+
+  const [secondNumber, setSecondNumber] = useState(false)
+
+  const handleNumberInput = (digit) => {
+
+    if (secondNumber === false || display === 'ERROR') {
+      setActualNumber(String(digit))
+      setDisplay(String(digit))
     }
-  };[display]
-  
-  const handleNumberInput = (number) => {
-    console.log('Número presionado:', number)
   }
-  
-  const handleOperation = (operation) => {
-    console.log('Operación:', operation)
-  }
-  
+
   return {
     display,
-    handleNumberInput,
-    handleOperation
+    handleNumberInput
   }
 }
 

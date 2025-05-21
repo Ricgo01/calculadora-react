@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-seven-segment-display": "^2.1.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.6",
