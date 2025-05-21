@@ -6,6 +6,8 @@ import '../../App.css'
 const KeyPad = () => {
     return(
          <div className = "KeyPad">
+                <OperationButton operation = "clear" symbol = "C"/>
+                <OperationButton operation = "negative" symbol = "+/-"/>
                 <NumberButton value = {7}/>
                 <NumberButton value = {8}/>
                 <NumberButton value = {9}/>

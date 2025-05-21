@@ -51,9 +51,17 @@
   
 }
 
-button:hover {
+.number:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+  box-shadow: 0 0 10px #cfdef5;
+  border-color: #7bacf7;
+  transition: all .3s ease-in-out;
+}
+
+.operation:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #f58a26;
+  border-color: #fa7e0a;
   transition: all .3s ease-in-out;
 }
 
@@ -71,7 +79,7 @@ button:hover {
 }
 
 .number{
-  background-color: #ffff;
+  background-color: #cfdef5;
   color:black;
 }
 

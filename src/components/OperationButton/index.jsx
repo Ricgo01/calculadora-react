@@ -5,11 +5,11 @@ import '../../App.css';
 
 
 const OperationButton = ({operation, symbol}) => {
-    const {handleNumberInput} = useCalculator();
+    const {handleOperation} = useCalculator();
     return (
         <button
             className = "operation"
-            onClick = {() => handleNumberInput(operation)}
+            onClick = {() => handleOperation(operation)}
             >{symbol}
         </button>
     )

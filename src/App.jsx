@@ -2,8 +2,6 @@ import { useState } from 'react'
 import './App.css'
 import NumberButton from './components/NumberButton'
 import OperationButton from './components/OperationButton'  
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -14,14 +12,16 @@ function App() {
   return (
     <div className="calculator-container">
       <h1>React Calculator</h1>
-      
-      {/* Display temporal */}
-      <div className="display">
-        <div className="display-value">0</div>
+
+      <div className = "display">
+            <div className = "display-value">{display}</div>
       </div>
       
-      {/* KeyPad */}
       <div className="KeyPad">
+        <OperationButton operation = "clear" symbol = "C"/>
+        <OperationButton operation = "negative" symbol = "+/-"/>
+        <p>peque</p>
+        <p>calculator</p>
         <NumberButton value={7} />
         <NumberButton value={8} />
         <NumberButton value={9} />
