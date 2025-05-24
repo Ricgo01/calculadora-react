@@ -1,6 +1,7 @@
 import React from 'react';
 import Display from '../Display';
 import KeyPad from '../KeyPad';
+import RepoButton from '../RepoButton';
 import '../../App.css';
 
 const Calculator = () => {
@@ -8,6 +9,7 @@ const Calculator = () => {
         <div className="calculator">
             <Display/>
             <KeyPad/>
+            <RepoButton/>
         </div>
     )
 }

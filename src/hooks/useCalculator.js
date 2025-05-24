@@ -1,28 +1,12 @@
-import { act, useState } from 'react'
+import { useContext } from 'react';
+import CalculatorContext from '../CalculatorContext';
 
-const useCalculator = () => {
-  const [display, setDisplay] = useState('0')
-  
-  const [actualNumber, setActualNumber] = useState(0)
-
-  const [previousNumber, setPreviusNumber] = useState(0)
-
-  const [operand, setOperand] = useState('')
-
-  const [secondNumber, setSecondNumber] = useState(false)
-
-  const handleNumberInput = (digit) => {
-
-    if (secondNumber === false || display === 'ERROR') {
-      setActualNumber(String(digit))
-      setDisplay(String(digit))
-    }
+export const useCalculator = () => {
+  const context = useContext(CalculatorContext);
+  if (!context) {
+    throw new Error('useCalculator debe usarse dentro de un CalculatorProvider');
   }
+  return context;
+};
 
-  return {
-    display,
-    handleNumberInput
-  }
-}
-
-export default useCalculator
+export default useCalculator;

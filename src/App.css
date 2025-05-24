@@ -108,3 +108,39 @@
   margin-bottom: 20px;
   font-size: 28px;
 }
+
+.repo-button {
+  display: inline-block; 
+  margin-top: 20px;
+  border-radius: 50%; 
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 8px;
+  line-height: 0;
+}
+
+.repo-button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; 
+}
+.repo-button:hover {
+  transform: translateY(-2px) scale(1.05); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.repo-button:active {
+  transform: translateY(1px) scale(0.98); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.repo-image {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: block; 
+}
+
+.tittle{
+  font-family: monospace;
+}
