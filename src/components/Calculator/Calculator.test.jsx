@@ -4,7 +4,7 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import Calculator from './index';
 import { CalculatorProvider } from '../../CalculatorContext';
 
-// Helper para renderizar el componente Calculator con su Provider
+
 const renderCalculator = () => {
   return render(
     <CalculatorProvider>
@@ -13,23 +13,15 @@ const renderCalculator = () => {
   );
 };
 
-// Helper para obtener el valor del display
-// Asume que el display es el único elemento que muestra números, "ERROR", o decimales.
-// Puedes hacerlo más robusto añadiendo un data-testid al componente Display.
+
 const getDisplayValue = () => {
-  // Intenta encontrar el elemento por un patrón más general.
-  // Esto es un poco frágil; un data-testid en el Display sería mejor.
   const displayElement = screen.getByTestId('calculator-display');
   return displayElement.textContent;
 };
 
 
 describe('Calculator Component - Vitest', () => {
-  beforeEach(()=> {
-    // No es estrictamente necesario renderizar aquí si cada test lo hace,
-    // pero si muchos tests usan la misma configuración inicial, puedes hacerlo.
-    // Por ahora, cada test renderizará su propia instancia para asegurar aislamiento.
-  });
+  
 
   it('Test: Chained Operations (e.g., 5 + 3 * 2 = 16)', async () => {
     renderCalculator();
@@ -114,6 +106,4 @@ describe('Calculator Component - Vitest', () => {
     await fireEvent.click(screen.getByRole('button', { name: '=' }));
     expect(getDisplayValue()).toBe('3.1428571');
   });
-
-  // Puedes añadir el test para '+/-' aquí también si lo deseas.
 });
